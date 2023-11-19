@@ -14,7 +14,8 @@ class Graph {
 private:
     struct NodeList {
         char name = '\0';
-        int weight = INT_MAX; //表示权重
+        int lengthWeight = INT_MAX; //表示权重
+        int timeWeight = INT_MAX;
     };
     std::list<NodeList> *Vertex;
     int VertexSum;
@@ -31,7 +32,7 @@ private:
 public:
     void setVertex(int);
 
-    void setEdge(char graph[][2], const int *weight, int length);
+    void setEdge(char graph[][2], const int *lengthWeight,const int *timeWeight, int length);
 
     void handleAdd();
     void prepareHandle();
